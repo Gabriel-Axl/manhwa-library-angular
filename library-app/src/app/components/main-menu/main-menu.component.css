@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 10rem;
 }
 
 .option{
@@ -35,7 +36,6 @@
     font-size: 1.5rem;
     position: relative;
 }
-
 .option-item::before {
     content: '';
     position: absolute;
@@ -72,4 +72,64 @@
     border-radius: 50%;
     background-color: #b21b0e;
     cursor: pointer;
+}
+
+.subnav-container{
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    height: 1rem;
+    background-color: #730000;
+}
+
+@media screen and (max-width: 819px) {
+    .main-menu-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+    }
+    
+    .menu-option{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .option-item-search{
+        margin: 0;
+    }
+    .subnav-container{
+        top: 10rem;
+    }
+    .menu-logo{
+        height: 5rem;
+    }
+}
+@media screen and (max-width: 329px) {
+    .main-menu-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 18rem;
+    }
+    .menu-option{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .option{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .option-item-search{
+        margin: 0;
+    }
+    .subnav-container{
+        top: 18rem;
+    }
 }
