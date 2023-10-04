@@ -19,8 +19,7 @@
 .menu-option{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-right: 10rem;
+    justify-content: center; 
 }
 
 .option{
@@ -56,19 +55,21 @@
 .option-item:hover::before {
     width: calc(100% - 20px);
 }
-
 .option-item-search{
+    display: flex;
+}
+.icon-search{
     display: block;
-    padding: 1rem 0;
-    margin-right: 1rem;
+    padding: 1rem;
+    width: 2.5rem;
     font-size: 1.5rem;
     position: relative;
     padding: 0.2rem 0.5rem;
 }
 
-.option-item-search:hover {
+
+.icon-search:hover {
     color: #000000;
-    padding: 0.2rem 0.5rem;
     border-radius: 50%;
     background-color: #b21b0e;
     cursor: pointer;
@@ -82,12 +83,27 @@
     background-color: #730000;
 }
 
+.option-item-search > input{
+    width: 40rem;
+    height: 2.5rem;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 0 0 1rem  0;
+    font-size: 1.5rem;
+}
+
+.option-item-search > input:focus {
+    border-color: #f0351c; /* Substitua pela cor desejada */
+    outline: none; /* Remove a borda azul padrão que alguns navegadores adicionam */
+}
+
+
 @media screen and (max-width: 819px) {
     .main-menu-container{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 10rem;
+        height: 12rem;
     }
     
     .menu-option{
@@ -96,12 +112,19 @@
         align-items: center;
         margin: 0;
     }
-
+    .option{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .option-item-search{
         margin: 0;
     }
+    .option-item-search > input{
+        width: 20rem;
+       
+    }
     .subnav-container{
-        top: 10rem;
+        top: 12rem;
     }
     .menu-logo{
         height: 5rem;
@@ -128,6 +151,10 @@
     }
     .option-item-search{
         margin: 0;
+    }
+    .option-item-search > input{
+        width: 12rem;
+       
     }
     .subnav-container{
         top: 18rem;

@@ -13,10 +13,28 @@ export class MainMenuComponent implements OnInit {
   faSearch = faSearch;
   faList = faList;
   faClock = faClock;
-
+  
+  inputValue: string = '';
+  inputView: Boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
   
+  changeInput(){
+    if(this.inputView == true){
+      this.submitSearch()
+    }else{
+      this.inputView = !this.inputView;
+    }
+    
+  }
+  submitSearch(){
+    if(this.inputValue!=''){
+      console.log(this.inputValue);
+      this.inputValue = '';
+    }
+    this.inputView = !this.inputView;
+      
+  }
 }
