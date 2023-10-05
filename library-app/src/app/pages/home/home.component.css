@@ -1,6 +1,6 @@
 :host {
     display: block;
-    height: 100vh;
+    height: 90vh;
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 23%, rgb(14, 4, 2) 77%, rgb(14, 0, 0) 100%);
     background-repeat: repeat-y;
@@ -22,4 +22,29 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 2rem;
+}
+@media screen and (max-width: 999px) {
+    .home-container{
+        top: 22rem;
+    }
+    .manga-list{
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+@media  screen and (max-width: 746px){
+    .home-container{
+        top: 33.5rem;
+    }
+    .manga-list{
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+@media  screen and (max-width: 556px){
+    .home-container{
+        top: 45rem;
+    }
+    .manga-list{
+        grid-template-columns: repeat(2, 1fr)
+    }
 }

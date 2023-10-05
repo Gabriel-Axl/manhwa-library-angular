@@ -1,30 +1,32 @@
-<nav class="main-menu-container">
-    <div class="menu-logo">
-        <img class="logo" src="../../../assets/logo.png" alt="">
-    </div>
-    <div class="menu-option">
-        <ul class="option">
-            <li class="option-item" >
-                <fa-icon [icon]="faList" style="font-size: 18px;"></fa-icon>
-                Categorias
-            </li>
-            <li class="option-item">
-                <fa-icon [icon]="faClock" style="font-size: 18px;"></fa-icon>
-                Recentes
-            </li>
-            <li class="option-item-search">
-                <input 
-                type="text" 
-                *ngIf="inputView" 
-                [(ngModel)]="inputValue"
-                (keydown.enter)="submitSearch()"
-                name="inputValue" 
-                placeholder="Pesquisar"/>
+<nav class="navbar-menu">
+    <div class="main-menu-container">
+        <div class="menu-logo">
+            <img class="logo" src="../../../assets/logo.png" alt="">
+        </div>
+        <div class="menu-option">
+            <ul class="option">
+                <li class="option-item" >
+                    <fa-icon [icon]="faList" style="font-size: 18px;"></fa-icon>
+                    Categorias
+                </li>
+                <li class="option-item">
+                    <fa-icon [icon]="faClock" style="font-size: 18px;"></fa-icon>
+                    Recentes
+                </li>
+                <li class="option-item-search">
+                    <input 
+                    type="text" 
+                    *ngIf="inputView" 
+                    [(ngModel)]="inputValue"
+                    (keydown.enter)="submitSearch()"
+                    name="inputValue" 
+                    placeholder="Pesquisar"/>
 
-                <fa-icon class="icon-search" [icon]="faSearch" (click)="changeInput()"></fa-icon>
-            </li>
-        </ul>
-        
+                    <fa-icon class="icon-search" [icon]="faSearch" (click)="changeInput()"></fa-icon>
+                </li>
+            </ul>
+            
+        </div>
     </div>
 </nav>
 <div class="subnav-container">

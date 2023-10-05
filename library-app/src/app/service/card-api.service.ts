@@ -33,6 +33,48 @@ export class CardApiService {
         cardImg: 'https://cdn.goatscans.com/wp-content/uploads/2022/09/ReturnOfTheFrozenPlayerNovelCapa-copiar-1-scaled-e1665796834834.jpg',
         numCap: 213,
         capDate: '10/10/2000'
+      },
+      {
+        id:4,
+        titulo: 'O cara que usa gelo gelado',
+        cardImg: 'https://cdn.goatscans.com/wp-content/uploads/2022/09/ReturnOfTheFrozenPlayerNovelCapa-copiar-1-scaled-e1665796834834.jpg',
+        numCap: 213,
+        capDate: '10/10/2000'
+      },
+      {
+        id:3,
+        titulo: 'O cara que usa gelo gelado',
+        cardImg: 'https://cdn.goatscans.com/wp-content/uploads/2022/09/ReturnOfTheFrozenPlayerNovelCapa-copiar-1-scaled-e1665796834834.jpg',
+        numCap: 213,
+        capDate: '10/10/2000'
+      },
+      {
+        id:3,
+        titulo: 'O cara que usa gelo gelado',
+        cardImg: 'https://cdn.goatscans.com/wp-content/uploads/2022/09/ReturnOfTheFrozenPlayerNovelCapa-copiar-1-scaled-e1665796834834.jpg',
+        numCap: 213,
+        capDate: '10/10/2000'
+      },
+      {
+        id:3,
+        titulo: 'O cara que usa gelo gelado',
+        cardImg: 'https://cdn.goatscans.com/wp-content/uploads/2022/09/ReturnOfTheFrozenPlayerNovelCapa-copiar-1-scaled-e1665796834834.jpg',
+        numCap: 213,
+        capDate: '10/10/2000'
+      },
+      {
+        id:3,
+        titulo: 'O cara que usa gelo gelado',
+        cardImg: 'https://cdn.goatscans.com/wp-content/uploads/2022/09/ReturnOfTheFrozenPlayerNovelCapa-copiar-1-scaled-e1665796834834.jpg',
+        numCap: 213,
+        capDate: '10/10/2000'
+      },
+      {
+        id:3,
+        titulo: 'O cara que usa gelo gelado',
+        cardImg: 'https://cdn.goatscans.com/wp-content/uploads/2022/09/ReturnOfTheFrozenPlayerNovelCapa-copiar-1-scaled-e1665796834834.jpg',
+        numCap: 213,
+        capDate: '10/10/2000'
       }
     ];
   }
