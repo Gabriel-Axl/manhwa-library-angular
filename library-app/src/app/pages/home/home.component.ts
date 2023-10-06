@@ -9,11 +9,12 @@ import { CardApiService } from '../../service/card-api.service';
 
 export class HomeComponent implements OnInit {
   dados: any[] = [];
-
+  data: any[] = [];
   constructor(private apiService: CardApiService) { }
 
   ngOnInit(): void {
-    this.dados = this.apiService.getDados()
+    this.data = this.apiService.getDados()
+    this.dados = this.data.slice(0, 9);
   }
 
 }

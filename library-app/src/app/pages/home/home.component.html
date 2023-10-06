@@ -1,4 +1,12 @@
 <div class="home-container">
+    <div class="page-title">
+        <div class="title">
+            <h2>Modificados recentemente</h2>
+        </div>
+        <div class="hr">
+
+        </div>
+    </div>
     <div class="manga-list-conteiner">
         <ul class="manga-list" >
             <li *ngFor="let dado of dados">
@@ -7,7 +15,9 @@
                 [titulo]="dado.titulo"
                 [capDate]="dado.capDate"
                 [numCap]="dado.numCap"
-                ></app-manga-card></li>
+                ></app-manga-card>
+            </li>
+            <app-more-card-btn></app-more-card-btn>
         </ul>
     </div>
 </div>
