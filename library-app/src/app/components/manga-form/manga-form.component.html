@@ -1,0 +1,8 @@
+<div class="form-container">
+    <form  enctype="multipart/form-data" (submit)="onSaveManga()">
+        <input [(ngModel)]="mangaDTO.title" name="title" required>
+        <input [(ngModel)]="mangaDTO.numCap" name="numCap" required>
+        <input type="file" (change)="onFileSelected($event)" required name="file">
+        <button type="submit">Salvar</button>
+    </form>
+</div>

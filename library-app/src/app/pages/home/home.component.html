@@ -11,8 +11,8 @@
         <ul class="manga-list" >
             <li *ngFor="let dado of dados">
                 <app-manga-card
-                [cardImg]="dado.cardImg"
-                [titulo]="dado.titulo"
+                [cardImg]="dado.urlImg"
+                [titulo]="dado.title"
                 [capDate]="dado.capDate"
                 [numCap]="dado.numCap"
                 ></app-manga-card>
