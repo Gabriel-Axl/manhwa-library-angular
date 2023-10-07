@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .manga-form{
@@ -100,6 +101,7 @@
     border-radius: 0.5rem;
     margin-left: auto;
     margin-top: 1.5rem;
+    cursor: pointer;
 }
 .formTitle{
     font-size: 1.5rem;
@@ -161,4 +163,10 @@
     .inputFile{
         width: 15rem;
     }
+}
+.loadiing{
+    position: relative;
+    top: 1rem;
+    left: 0;
+    transform: rotate(-50%, -50%);
 }

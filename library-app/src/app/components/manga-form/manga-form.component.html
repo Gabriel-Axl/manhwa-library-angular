@@ -1,8 +1,8 @@
 <div class="form-container">
     <div class="formTitle">
-        <h1>Cadastre o manhwa</h1>
+        <h1>{{ title }}</h1>
     </div>
-    <form class="manga-form" enctype="multipart/form-data" (submit)="onSaveManga()">
+    <form class="manga-form" *ngIf="!load" enctype="multipart/form-data" (submit)="onSaveManga()">
         <div class="inputs">
             <p class="title">Título do manga</p>
             <input class="inputTitle" [(ngModel)]="mangaDTO.title" name="title" required>
@@ -11,6 +11,7 @@
         </div>
         <p class="title">Selecione a imagem do manga</p>
         <input class="inputFile" type="file" (change)="onFileSelected($event)" required name="file" accept="image/*">
-        <button class="btn" type="submit">Salvar</button>
+        <button class="btn" type="submit" *ngIf="mangaDTO.title && mangaDTO.numCap">Salvar</button>
     </form>
+    <app-loading class="loadiing" *ngIf="load"></app-loading>
 </div>

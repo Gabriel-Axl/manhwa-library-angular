@@ -17,6 +17,7 @@ import { DatePipe } from '@angular/common';
 import {AngularFireModule} from '@angular/fire/compat'
 import {AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { environment } from 'src/environments/environment';
+import { LoadingComponent } from './components/loading/loading.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { environment } from 'src/environments/environment';
     MainMenuComponent,
     MangaCardComponent,
     MoreCardBtnComponent,
-    MangaFormComponent
+    MangaFormComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

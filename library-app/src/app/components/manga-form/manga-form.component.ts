@@ -13,6 +13,9 @@ import { Router } from '@angular/router';
 
 export class MangaFormComponent implements OnInit {
   
+  load: boolean = false;
+  title: string = "Cadastre o manga!"
+
   mangaDTO: MangaDTO = {
     title:"",
     numCap: null,
@@ -30,11 +33,15 @@ export class MangaFormComponent implements OnInit {
   }
 
   async onSaveManga() {
+    
     if (this.selectedFile) {
+      this.loadiing()
       await this.saveFile();
+    }else{
+      alert("Selecione uma imagem")
     }
 
-    if (this.mangaDTO.urlImg != "") {
+    if (this.mangaDTO.urlImg != "" && this.mangaDTO.title != "" && this.mangaDTO.numCap !=null) {
       this.mangaService.saveMangaInfo(this.mangaDTO).subscribe(
         (response: any) => {
           this.router.navigate(['/']);
@@ -64,6 +71,11 @@ export class MangaFormComponent implements OnInit {
       this.selectedFile = inputElement.files[0];
 
     }
+  }
+
+  loadiing(){
+    this.title = "Salvando..."
+    this.load = !this.load
   }
 
 }
