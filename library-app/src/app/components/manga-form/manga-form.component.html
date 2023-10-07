@@ -1,8 +1,16 @@
 <div class="form-container">
-    <form  enctype="multipart/form-data" (submit)="onSaveManga()">
-        <input [(ngModel)]="mangaDTO.title" name="title" required>
-        <input [(ngModel)]="mangaDTO.numCap" name="numCap" required>
-        <input type="file" (change)="onFileSelected($event)" required name="file">
-        <button type="submit">Salvar</button>
+    <div class="formTitle">
+        <h1>Cadastre o manhwa</h1>
+    </div>
+    <form class="manga-form" enctype="multipart/form-data" (submit)="onSaveManga()">
+        <div class="inputs">
+            <p class="title">Título do manga</p>
+            <input class="inputTitle" [(ngModel)]="mangaDTO.title" name="title" required>
+            <p class="num">Capítulo</p>
+            <input class="inputNumber"  [(ngModel)]="mangaDTO.numCap" type="number" name="numCap" required>
+        </div>
+        <p class="title">Selecione a imagem do manga</p>
+        <input class="inputFile" type="file" (change)="onFileSelected($event)" required name="file" accept="image/*">
+        <button class="btn" type="submit">Salvar</button>
     </form>
 </div>

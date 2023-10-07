@@ -12,10 +12,10 @@ import { Router } from '@angular/router';
 })
 
 export class MangaFormComponent implements OnInit {
-
+  
   mangaDTO: MangaDTO = {
     title:"",
-    numCap: 0,
+    numCap: null,
     urlImg: ""
   }
    

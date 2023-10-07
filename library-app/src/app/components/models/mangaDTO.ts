@@ -1,5 +1,5 @@
 export interface MangaDTO {
     title: string;
-    numCap: number;
+    numCap: number | null;
     urlImg?: string;
 }

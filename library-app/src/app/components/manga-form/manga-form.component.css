@@ -2,11 +2,163 @@
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
-    width: 100%;
-    height: 20rem;
+    padding-bottom: 2.5rem;
+    width: 33rem;
+    margin: 3rem auto;
+    border-radius: 1rem;
+    background-color: #7300006c;
+    height: 25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+}
 
+.manga-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputTitle{
+    width: 20rem;
+    height: 2rem;
+    padding: 0.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    grid-area: ti;
+    background-color: #d12815ae;
+    border: 1px solid #f0351c;
+    color: white;
+}
+
+.inputNumber{
+    width: 7rem;
+    height: 2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    font-weight: 400;
+    border-radius: 0.5rem;
+    grid-area: ni;
+    background-color: #d12815ae;
+    border: 1px solid #f0351c;
+    color: white;
+}
+
+.inputFile{
+    margin-bottom: 1rem;
+}
+
+.inputFile {
+    /* Estilize a aparência do input */
+    border: 1px solid #f0351c;
+    padding: 5px;
+    border-radius: 0.5rem;
+    background-color: #d12815ae;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+}
+
+.inputFile::-webkit-file-upload-button {
+    visibility: hidden;
+    position: absolute;
+}
+
+.title{
+    color: white;
+    grid-area: tp;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.num{
+    color: white;
+    font-weight: bold;
+    grid-area: np;
+    margin-left: 0.5rem;
+}
+
+.inputs{
+    width: 28rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "tp np "
+    "ti ni";
+}
+.btn{
+    padding: 0.5rem;
+    width: 15rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #f0351c;
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-top: 1.5rem;
+}
+.formTitle{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+@media screen and (max-width: 565px) {
+    .form-container{
+        width: 25rem;
+        height: 23rem;
+        padding-bottom: 3rem;
+    }
+    .formTitle{
+        font-size: 1rem;
+    }
+    .inputs{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "tp" 
+        "ti"
+        "np"
+        "ni";
+        width: 20rem;
+    }
+    .inputNumber{
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 419px) {
+    .form-container{
+        width: 20rem;
+        height: 23rem;
+        padding-bottom: 3rem;
+    }
+    .formTitle{
+        font-size: 1rem;
+    }
+    .inputs{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "tp" 
+        "ti"
+        "np"
+        "ni";
+        width: 15rem;
+    }
+    .inputNumber{
+        margin-bottom: 1rem;
+    }
+    .inputTitle{
+        width: 15rem;
+    }
+    .manga-form{
+        justify-content: center;
+        align-items: center;
+    }
+    .inputFile{
+        width: 15rem;
+    }
 }
