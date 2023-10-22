@@ -1,0 +1,34 @@
+.more-btn-card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 10rem;
+    height: 21rem;
+    border: 1px solid #f20909;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: #c0211235;
+}
+.more-plus-icon{
+    color: #9a1908f7;
+    z-index: 2;
+    transition: transform 0.8s;
+}
+.more-plus-icon:hover{
+    transform: scale(1.1)
+}
+.more-btn-card-container > h4{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.more-btn-card-container > div{
+    position: absolute;
+    width: 6.9rem;
+    height: 6.9rem;
+    top: 7.9rem;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.781);
+}

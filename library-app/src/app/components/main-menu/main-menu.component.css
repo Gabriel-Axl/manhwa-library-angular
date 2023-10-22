@@ -1,20 +1,25 @@
-.main-menu-container{
+.navbar-menu{
     display: flex;
-    position: fixed;
+    position: static;
     top: 0;
     z-index: 99;
     justify-content: space-evenly;
     width: 100%;
-    height: 5rem;
     box-shadow: 0 0 3rem rgb(0, 0, 0);
     background: #000000;
     color: white;
 }
 
+.main-menu-container{
+    display: flex;
+    justify-content: space-between;
+    width: 63rem;
+}
 .menu-logo{
     display: flex;
     align-items: center;
     height: 5rem;
+    cursor: pointer;
 }
 
 .menu-option{
@@ -62,6 +67,7 @@
 .icon-search{
     display: block;
     padding: 1rem;
+    margin-right: 2rem;
     width: 2.5rem;
     font-size: 1.5rem;
     position: relative;
@@ -85,7 +91,7 @@
 }
 
 .option-item-search > input{
-    width: 40rem;
+    width: 20rem;
     height: 2.5rem;
     padding: 5px;
     margin-right: 5px;
@@ -98,12 +104,8 @@
     outline: none; /* Remove a borda azul padrão que alguns navegadores adicionam */
 }
 
-@media screen and (max-width: 1312px){
-    .option-item-search > input{
-        width: 20rem;
-    }
-}
-@media screen and (max-width: 968px) {
+
+@media screen and (max-width: 999px) {
     .main-menu-container{
         flex-direction: column;
         justify-content: center;
@@ -134,6 +136,17 @@
     .menu-logo{
         height: 5rem;
     }
+    .icon-search{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 685px) {
+    .main-menu-container{
+        height: 11rem;
+    }
+    .icon-search{
+        margin: 0;
+    }
 }
 @media screen and (max-width: 329px) {
     .main-menu-container{
@@ -163,5 +176,8 @@
     }
     .subnav-container{
         top: 18rem;
+    }
+    .icon-search{
+        margin: 0;
     }
 }

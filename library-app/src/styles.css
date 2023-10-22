@@ -7,5 +7,6 @@
 
 body{
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 23%, rgba(33,10,6,1) 77%, rgba(41,0,0,1) 100%);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 23%, rgb(14, 4, 2) 77%, rgb(14, 0, 0) 100%);
+    background-repeat: repeat-y;
 }
