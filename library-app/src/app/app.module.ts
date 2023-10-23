@@ -18,6 +18,7 @@ import {AngularFireModule} from '@angular/fire/compat'
 import {AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { environment } from 'src/environments/environment';
 import { LoadingComponent } from './components/loading/loading.component';
+import { DetailsComponent } from './pages/details/details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     MangaCardComponent,
     MoreCardBtnComponent,
     MangaFormComponent,
-    LoadingComponent
+    LoadingComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

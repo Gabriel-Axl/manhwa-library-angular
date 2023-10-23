@@ -16,7 +16,6 @@ export class MangaCardComponent implements OnInit {
   @Input() cardImg: string = "";
   @Input() numCap: number = 0;
   @Input() capDate: string  | null = "10/10/2002";
-  @Input() categoria: string[] = ['ação'];
 
   constructor(
     private mangaService: CardApiService,
