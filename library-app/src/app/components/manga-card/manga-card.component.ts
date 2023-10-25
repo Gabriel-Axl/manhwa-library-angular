@@ -10,6 +10,7 @@ import { CardApiService } from 'src/app/service/card-api.service';
 })
 
 export class MangaCardComponent implements OnInit {
+  load: boolean = true;
   @Input() id:string = ""
   faTrash = faTrash;
   @Input() titulo: string = "Solo leveling";
@@ -24,7 +25,9 @@ export class MangaCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
- deleteManga(){
+ deleteManga(event: Event){
+    event.stopPropagation()
+    this.loading();
     this.mangaService.deleteMangaById(this.id).subscribe(
       async () => {
         console.log("manga deletado com sucesso")
@@ -49,5 +52,7 @@ export class MangaCardComponent implements OnInit {
       console.error('Erro ao excluir o arquivo:', error);
     }
   }
-
+  loading(){
+    this.load = !this.load
+  }
 }

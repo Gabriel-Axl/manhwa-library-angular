@@ -37,4 +37,8 @@ export class CardApiService {
     return this.http.delete(`${this.apiUrl}/${Id}`)
   }
 
+  editManga(Id: string, mangaModel: mangaModel){
+    return this.http.put(`${this.apiUrl}/${Id}`, mangaModel)
+  }
+
 }

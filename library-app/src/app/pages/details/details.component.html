@@ -14,9 +14,12 @@
             </div>
             <div class="last-cap">
                 <p>Último capítulo lido: </p>
+                <div class="cap-container">
+                    <fa-icon class="more-icon" [icon]="faPlusSquare" style="font-size: 2rem;" (click)="more()"></fa-icon>
+                    <span>{{ manga.numCap }}</span>
+                    <fa-icon class="less-icon" [icon]="faMinusSquare" style="font-size: 2rem;" (click)="less()"></fa-icon>
+                </div>
                 
-                
-                <span>{{ manga.numCap }}</span>
             </div>
         </div>
     </div>
