@@ -4,7 +4,6 @@ import { MangaDTO } from 'src/app/components/models/mangaDTO';
 import {AngularFireStorage} from '@angular/fire/compat/storage'
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-manga-form',
   templateUrl: './manga-form.component.html',
@@ -19,7 +18,8 @@ export class MangaFormComponent implements OnInit {
   mangaDTO: MangaDTO = {
     title:"",
     numCap: null,
-    urlImg: ""
+    urlImg: "",
+    description: ""
   }
    
   selectedFile!: File;

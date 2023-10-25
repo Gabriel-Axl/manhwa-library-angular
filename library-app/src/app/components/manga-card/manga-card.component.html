@@ -1,6 +1,6 @@
-<div class="card-container">
+<div class="card-container" *ngIf="load" [routerLink]="['manga/', titulo]">
     <div class="manga-img">
-        <fa-icon class="delete-icon" [icon]="faTrash" style="font-size: 18px;" (click)="deleteManga()"></fa-icon>
+        <fa-icon class="delete-icon" [icon]="faTrash" style="font-size: 18px;" (click)="deleteManga($event)"></fa-icon>
         <img src="{{ cardImg }}" alt="">
     </div>
     <div class="titulo">
@@ -17,4 +17,7 @@
             <span>{{capDate}}</span>
         </div>
     </div>
+</div>
+<div class="loading-container" *ngIf="!load">
+    <app-loading class="loading"></app-loading>
 </div>

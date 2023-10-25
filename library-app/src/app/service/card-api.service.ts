@@ -28,8 +28,17 @@ export class CardApiService {
   getAllManga(pageable: any): Observable<page<mangaModel>> {
     return this.http.get<page<mangaModel>>(`${this.apiUrl}`, { params: pageable });
   }
+
+  getByTitle(title: string | null){
+    return this.http.get(`${this.apiUrl+"/detail/"+title }`);
+  }
+
   deleteMangaById(Id: string){
     return this.http.delete(`${this.apiUrl}/${Id}`)
+  }
+
+  editManga(Id: string, mangaModel: mangaModel){
+    return this.http.put(`${this.apiUrl}/${Id}`, mangaModel)
   }
 
 }

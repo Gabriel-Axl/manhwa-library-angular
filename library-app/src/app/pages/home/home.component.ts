@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   pageable = {
     page: '0',   
     size: '9',  
-    sort: 'id',  
+    sort: 'title',  
     direction: 'ASC'  
   };
 

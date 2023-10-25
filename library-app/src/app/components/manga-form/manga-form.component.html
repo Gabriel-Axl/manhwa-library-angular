@@ -9,6 +9,10 @@
             <p class="num">Capítulo</p>
             <input class="inputNumber"  [(ngModel)]="mangaDTO.numCap" type="number" name="numCap" required>
         </div>
+        <div class="desc-container">
+            <p class="title">Descrição/sinopse do manga</p>
+            <textarea class="inputDesc" [(ngModel)]="mangaDTO.description" name="description" required></textarea>
+        </div>
         <p class="title">Selecione a imagem do manga</p>
         <input class="inputFile" type="file" (change)="onFileSelected($event)" required name="file" accept="image/*">
         <button class="btn" type="submit" *ngIf="mangaDTO.title && mangaDTO.numCap">Salvar</button>

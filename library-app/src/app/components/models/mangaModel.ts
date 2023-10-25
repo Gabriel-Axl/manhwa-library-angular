@@ -5,5 +5,6 @@ export interface mangaModel {
     urlImg: string;
     numCap: number;
     title: string;
+    description: string;
   }
   
