@@ -15,7 +15,7 @@ Tela de inserção de novos livros
 
 Tela de detalhes do livro 
 
-![](./Assets/telaHome.png)
+![](./Assets/telaDetalhes.png)
 
 ## Como usar
 
