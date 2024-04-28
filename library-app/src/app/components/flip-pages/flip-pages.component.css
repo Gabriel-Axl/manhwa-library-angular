@@ -1,0 +1,52 @@
+.flip-pages-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 18rem;
+    height: 2rem;
+    border: 1px solid #f0351c00;
+    border-radius: 10px;
+    margin: 2rem 0 3rem 0;
+    color: white;
+}
+
+.flip-pages-container{
+    margin:2rem auto;
+}
+
+.page-list{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.number-click{
+    background-color: #f0351ca3;
+    border: 1px outset #b21c0e78;
+    border-radius: 5px 1px 5px 5px;
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.pass-arrow{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.548);
+}
+
+ 
+.page-number > a:hover{
+    background-color: #430202f7;
+    color: #ff1e00;
+}
+
+.pass-arrow:hover{
+    color: #ff1e00;
+}
+
+.selected-page{
+    background-color: #ff1e00;
+    border-color: rgba(255, 255, 255, 0.535);
+}

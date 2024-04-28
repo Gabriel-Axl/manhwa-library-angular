@@ -34,11 +34,15 @@ export class CardApiService {
   }
 
   deleteMangaById(Id: string){
-    return this.http.delete(`${this.apiUrl}/${Id}`)
+    return this.http.delete(`${this.apiUrl}/${Id}`);
   }
 
   editManga(Id: string, mangaModel: mangaModel){
     return this.http.put(`${this.apiUrl}/${Id}`, mangaModel)
+  }
+
+  getNumberPages(){
+    return this.http.get(`${this.apiUrl + "/pages"}`);
   }
 
 }

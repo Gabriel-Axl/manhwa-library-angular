@@ -31,7 +31,6 @@ export class MainMenuComponent implements OnInit {
   }
   submitSearch(){
     if(this.inputValue!=''){
-      console.log(this.inputValue);
       this.inputValue = '';
     }
     this.inputView = !this.inputView;

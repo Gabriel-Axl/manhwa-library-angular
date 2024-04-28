@@ -30,7 +30,6 @@ export class MangaCardComponent implements OnInit {
     this.loading();
     this.mangaService.deleteMangaById(this.id).subscribe(
       async () => {
-        console.log("manga deletado com sucesso")
         await this.deleteFile(this.cardImg)
         window.location.reload();
       },

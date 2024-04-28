@@ -58,8 +58,7 @@ export class MangaFormComponent implements OnInit {
   async saveFile(){
     const path = `mangaImg/${this.mangaDTO.title + this.selectedFile}`
     const uploadTask = await this.fireStorage.upload(path, this.selectedFile)
-    const url = await uploadTask.ref.getDownloadURL()
-    console.log(url)  
+    const url = await uploadTask.ref.getDownloadURL() 
     this.mangaDTO.urlImg = url;
 
   }

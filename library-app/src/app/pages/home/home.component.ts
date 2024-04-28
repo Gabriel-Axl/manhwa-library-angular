@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { CardApiService } from '../../service/card-api.service';
 import { mangaModel } from 'src/app/components/models/mangaModel';
 import { DatePipe } from '@angular/common';
@@ -21,11 +21,15 @@ export class HomeComponent implements OnInit {
   constructor(private apiService: CardApiService, private datePipe: DatePipe) { }
 
   ngOnInit(): void {
+    this.getMangas(0);
+  }
+
+  @Output() getMangas(page: number){
+    this.pageable.page = page.toString();
     this.apiService.getAllManga(this.pageable).subscribe(
       data => {
         this.dados = data.content.map(manga => {
           manga.capDate = this.datePipe.transform(manga.capDate, 'dd/MM/yyyy');
-          console.log(manga)
           return manga;
         });
       },

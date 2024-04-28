@@ -19,6 +19,7 @@ import {AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { environment } from 'src/environments/environment';
 import { LoadingComponent } from './components/loading/loading.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { FlipPagesComponent } from './components/flip-pages/flip-pages.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { DetailsComponent } from './pages/details/details.component';
     MoreCardBtnComponent,
     MangaFormComponent,
     LoadingComponent,
-    DetailsComponent
+    DetailsComponent,
+    FlipPagesComponent
   ],
   imports: [
     BrowserModule,

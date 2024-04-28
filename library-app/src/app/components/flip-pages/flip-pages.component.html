@@ -1,0 +1,11 @@
+<div class="flip-pages-container">
+    <a class="pass-arrow" (click)="handleButtonClick($event, (selectedPage -1))" href=""><fa-icon [icon]="faAngleLeft" style="font-size: 18px;"></fa-icon></a>
+    <ol class="page-list">
+        <li *ngFor="let page of pagesCount; 
+        let i = index" class="page-number" 
+        (click)="handleButtonClick($event, i)">
+            <a class="number-click" href="" [class.selected-page]="i==selectedPage">{{ i + 1 }}</a>
+        </li>
+    </ol>
+    <a class="pass-arrow" (click)="handleButtonClick($event, (selectedPage+1))"  href=""><fa-icon  [icon]="faAngleRight" style="font-size: 18px;"></fa-icon></a>  
+</div>
